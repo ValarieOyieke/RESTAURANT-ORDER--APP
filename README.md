@@ -44,4 +44,4 @@ Users should be able to:
 - [Javascript Tutorial](https://www.javascripttutorial.net) 
 
 ## Feedback
-Suggestions on how to improve is highly welcome.Thank you!💜
+Suggestions on how to improve are highly welcome.Thank you!💜
