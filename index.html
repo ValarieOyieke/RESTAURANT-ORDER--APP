@@ -14,6 +14,7 @@
 </head>
 <body>
     <div class="container">
+        
         <header>
             <div class="header">
                 <h1 class="header-title">Valarie's Diner</h1>
@@ -22,25 +23,22 @@
         </header>
 
         <main>
-            <div id="menu">
-                <!-- content here -->
-            </div>
-
-            <div class="thanks-message" id="thanks-message">
-                <!-- Thank you note here -->
-            </div>
-
+            <!-- content here -->
+            <div id="menu"></div>
+                
+             <!-- Thank you note here -->
+            <div class="thanks-message" id="thanks-message"></div>
+               
+            
             <div class="order-section hidden" id="order-section"> 
                 <h3 class="order-title">Your Order</h3>
 
-                <div class="order-items-container" id="order-items-container">
-                    <!-- Order here -->
-                </div>
-
-                <div class="order-total-container" id ="order-total-container">
-                    <!-- Total price here -->
-                </div>
-
+                <!-- Order here -->
+                <div class="order-items-container" id="order-items-container"></div>
+                    
+                <!-- Total price here -->
+                <div class="order-total-container" id ="order-total-container"></div>
+                    
                 <button type="button" class="complete-order-btn" id="complete-order-btn">Complete order</button>
             </div>
 
@@ -48,9 +46,33 @@
             <div class="modal hidden" id="modal">
                 <h1 class="modal-title">Enter card details</h1>
                 <form class="payment-form" id="payment-form">
-                    <input type="text" name="name" id="card-name" class="input-payment-form" placeholder="Enter your name" required>
-                    <input type="text" name="cardNumber" id="card-number" class="input-payment-form" placeholder="Enter card number" required>
-                    <input type="text" name="cardNumber" id="cvv" class="input-payment-form" placeholder="CVV" required>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        id="card-name" 
+                        class="input-payment-form" 
+                        placeholder="Enter your name" 
+                        required
+                    />
+
+                    <input 
+                        type="text" 
+                        name="cardNumber" 
+                        id="card-number" 
+                        class="input-payment-form" 
+                        placeholder="Enter card number" 
+                        required
+                    />
+
+                    <input 
+                        type="text" 
+                        name="cardNumber" 
+                        id="cvv" 
+                        class="input-payment-form" 
+                        placeholder="CVV" 
+                        required
+                    />
+
                     <button type="submit" class="pay-btn" id="pay-btn">Pay</button>
                 </form>
             </div>
