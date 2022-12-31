@@ -6,7 +6,7 @@ const totalPriceContainer = document.getElementById('order-total-container')
 const paymentForm = document.getElementById('payment-form')
 const thanksMessage = document.getElementById('thanks-message')
 
-let orderedItems = []
+const orderedItems = []
 
 
 // handles click events 
@@ -62,9 +62,7 @@ modal.addEventListener('submit', function(e){
 
 // Adds selected items to orderedItems array 
 function handleAddClick(itemId) {
-    const itemObj = menuArray.filter((chosenItem) => {
-        return chosenItem.id == itemId
-    })[0]
+    const itemObj = menuArray.filter(chosenItem => chosenItem.id == itemId)[0]
 
     itemObj.quantity ++                                        
     itemObj.total = itemObj.price * itemObj.quantity
@@ -79,9 +77,7 @@ function handleAddClick(itemId) {
 
 // Removes items from orderedItems array
 function handleRemoveClick(removedIndex){
-    const itemObj = orderedItems.filter((item) => {
-        return item.id == removedIndex
-    })[0]
+    const itemObj = orderedItems.filter(item => item.id == removedIndex)[0]
 
         itemObj.quantity--
         itemObj.total = itemObj.price * itemObj.quantity
@@ -131,9 +127,7 @@ function getPrice(){
     let totalPrice = 0
     let totalHtml = ``
 
-    orderedItems.forEach((item)=>{
-        totalPrice += item.total
-      })
+    orderedItems.forEach(item => totalPrice += item.total)
 
         totalHtml += 
         `<div class="order-total" id="order-total">
