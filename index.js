@@ -6,7 +6,7 @@ const totalPriceContainer = document.getElementById('order-total-container')
 const paymentForm = document.getElementById('payment-form')
 const thanksMessage = document.getElementById('thanks-message')
 
-const orderedItems = []
+let orderedItems = []
 
 
 // handles click events 
@@ -29,7 +29,7 @@ document.addEventListener('click', function(e) {
 
 
 // handles submit events on the modal
-modal.addEventListener('submit', function(e){
+modal.addEventListener('submit', (e)=>{
     e.preventDefault()
 
     const paymentFormData = new FormData(paymentForm)
@@ -123,7 +123,7 @@ function getOrderHtml(){
 
 
 // Calculates the  total and grand total prices of the Menu Items
-function getPrice(){
+function getPrice() {
     let totalPrice = 0
     let totalHtml = ``
 
@@ -162,7 +162,7 @@ function getFeedHtml() {
 
 
 // Renders the Html string returned by getFeedHtml to the DOM
-function render() {
+function render(){
     document.getElementById('menu').innerHTML = getFeedHtml()
 }
 
