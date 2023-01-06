@@ -10,7 +10,7 @@ let orderedItems = []
 
 
 // handles click events 
-document.addEventListener('click', function(e) {
+document.addEventListener('click', (e) => {
     if (e.target.dataset.add){
        orderContainer.classList.remove('hidden')
         handleAddClick(e.target.dataset.add)
@@ -29,7 +29,7 @@ document.addEventListener('click', function(e) {
 
 
 // handles submit events on the modal
-modal.addEventListener('submit', (e)=>{
+modal.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const paymentFormData = new FormData(paymentForm)
@@ -61,7 +61,7 @@ modal.addEventListener('submit', (e)=>{
 
 
 // Adds selected items to orderedItems array 
-function handleAddClick(itemId) {
+const handleAddClick = (itemId) => {
     const itemObj = menuArray.filter(chosenItem => chosenItem.id == itemId)[0]
 
     itemObj.quantity ++                                        
@@ -76,7 +76,7 @@ function handleAddClick(itemId) {
 
 
 // Removes items from orderedItems array
-function handleRemoveClick(removedIndex){
+const handleRemoveClick = (removedIndex) => {
     const itemObj = orderedItems.filter(item => item.id == removedIndex)[0]
 
         itemObj.quantity--
@@ -94,7 +94,7 @@ function handleRemoveClick(removedIndex){
 
 /* Creates an Html string of ordered items returned by handleAddClick or
    handleRemoveClick and renders them to the DOM*/
-function getOrderHtml(){
+const getOrderHtml = () => {
     let orderHtml = ``
 
      
@@ -123,7 +123,7 @@ function getOrderHtml(){
 
 
 // Calculates the  total and grand total prices of the Menu Items
-function getPrice() {
+const getPrice = () => {
     let totalPrice = 0
     let totalHtml = ``
 
@@ -140,7 +140,7 @@ function getPrice() {
   
 
 // Creates an Html string of menu items
-function getFeedHtml() {
+const getFeedHtml = () => {
     let menuHtml = ''
 
     menuArray.forEach((item) => {
@@ -162,7 +162,7 @@ function getFeedHtml() {
 
 
 // Renders the Html string returned by getFeedHtml to the DOM
-function render(){
+const render = ()=> {
     document.getElementById('menu').innerHTML = getFeedHtml()
 }
 
